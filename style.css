@@ -292,6 +292,20 @@ a:hover {
     z-index: 1;
 }
 
+
+/* collapse navbar-collapse navbar-1 special-dropdown-nav */
+
+
+/* .navbar.row {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-collapse {
+    position: absolute;
+    right: 35%
+} */
+
 .navbar-brand {
     height: auto;
     padding: 3px 15px;
@@ -316,19 +330,21 @@ a:hover {
 }
 
 .navbar .nav {
-    padding-top: 2px;
-    margin-right: -16px;
-    float: right;
+    list-style: none;
+    text-decoration: none;
+    margin-right: 5%;
     z-index: 1;
 }
 
 .nav>li {
+    text-decoration: none;
     float: left;
     margin-top: 4px;
     font-size: 16px;
 }
 
 .navbar-nav .open .dropdown-menu>li>a {
+    text-decoration: overline;
     text-align: inherit;
 }
 
@@ -361,6 +377,16 @@ a:hover {
     position: relative;
     z-index: 2;
 }
+
+
+/* .site-navigation {
+    display: flex;
+}
+
+.space {
+    padding: 10%;
+    list-style: none;
+} */
 
 @media (min-width: 768px) {
     .site-navigation {
@@ -549,6 +575,7 @@ a[data-lightbox]:hover::before {
     font-weight: 100;
     z-index: 1;
     position: absolute;
+    font-display: swap;
     top: 50%;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
@@ -650,6 +677,7 @@ label,
 .btn,
 a {
     font-family: "helvetica";
+    font-display: swap;
     font-weight: 400;
     color: #575757!important;
 }
@@ -677,7 +705,7 @@ a {
 }
 
 p {
-    font-size: 11px;
+    font-size: 14px;
 }
 
 .tight-width-whitespace {
@@ -687,6 +715,7 @@ p {
 
 .h1 {
     font-size: 20px;
+    font-display: swap;
     font-family: "Open Sans";
 }
 
@@ -771,15 +800,17 @@ h4 {
 }
 
 .bgc-atomic-tangerine {
-    background-color: #F3976C;
+    background-color: #A44545;
 }
 
 .tc-white {
-    color: #F3976C!important;
+    color: white!important;
+    z-index: 1;
+    position: relative;
 }
 
 .btn-atomic-tangerine {
-    background: #F3976C;
+    background: #A44545;
     color: #FFFFFF!important;
 }
 
@@ -848,13 +879,13 @@ h4 {
     }
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+@media only screen and (min-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
     .b-parallax {
         background-attachment: scroll;
     }
 }
 
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+@media only screen and (min-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
     .b-parallax {
         background-attachment: scroll;
     }
@@ -884,8 +915,8 @@ h4 {
     .bloc-fill-screen .fill-bloc-top-edge,
     .bloc-fill-screen .fill-bloc-bottom-edge {
         padding: 0 20px;
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
+        /* padding-left: constant(safe-area-inset-left);
+        padding-right: constant(safe-area-inset-right); */
     }
 }
 
